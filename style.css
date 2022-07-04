@@ -19,8 +19,29 @@
 .wrapper {
   background-color: gray;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+}
+
+.game-over-hidden {
+  display: none;
+}
+
+.game-over-visible {
+  display: flex;
+  background-color: red;
+  margin-left: auto;
+}
+
+#clear-button {
+  font-size: 100;
+  margin-left: auto;
+}
+
+.headerwrapper {
+  display: flex;
+  width: 350px;
 }
