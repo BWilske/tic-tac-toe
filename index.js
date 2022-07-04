@@ -14,6 +14,7 @@ const gameBoard = (() => {
 
     //renders the whole game board each time
     render: () => {
+      let square = "";
       for (let i = 0; i < gameBoard.state.length; i++) {
         square = document.getElementById(`square-${i}`);
         if (gameBoard.state[i] == 1) {
@@ -36,7 +37,19 @@ const player = (title, num) => {
 };
 
 const gameState = (() => {
-  return {};
+  return {
+    turn: 1,
+
+    handleTurn: () => {
+      if (gameState.turn === 1) {
+        gameState.turn = -1;
+      } else gameState.turn = 1;
+    },
+
+    handleClick: () => {
+      // gameBoard.update()
+    },
+  };
 })();
 
 const helperFunctions = (() => {
@@ -44,7 +57,7 @@ const helperFunctions = (() => {
     addClick: () => {
       for (let i = 0; i < gameBoard.state.length; i++) {
         square = document.getElementById(`square-${i}`);
-        square.addEventListener("click", () => console.log("test"), false);
+        square.addEventListener("click", (e) => console.log(e), false);
       }
     },
   };
@@ -52,3 +65,5 @@ const helperFunctions = (() => {
 
 const player1 = player("Bronk", 1);
 const player2 = player("Puffpuff", -1);
+gameBoard.render();
+helperFunctions.addClick();
