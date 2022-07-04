@@ -32,16 +32,22 @@
 
 .game-over-visible {
   display: flex;
-  background-color: red;
+  background-color: rgb(183, 65, 65);
   margin-left: auto;
+  font-size: 32px;
+  padding: 0 32px 0 12px;
 }
 
 #clear-button {
-  font-size: 100;
+  font-size: 32px;
+  /* position: fixed; */
   margin-left: auto;
+  background-color: gray;
+  border: none;
+  padding: none;
 }
 
 .headerwrapper {
   display: flex;
-  width: 350px;
+  width: 310px;
 }

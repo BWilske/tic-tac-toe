@@ -163,6 +163,7 @@ const helperFunctions = (() => {
       console.log(clearButtonEl);
       clearButtonEl.addEventListener("click", gameBoard.clearBoard, false);
     },
+    getPlayerNames: () => {},
   };
 })();
 
